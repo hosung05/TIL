@@ -67,3 +67,32 @@ ctrl + t
 | ----- | ------- | ---------- | ---- | ---- | ----- | ---- |
 | row를 | 추가    | 하고싶으면 | ctrl | +    | enter |      |
 |       |         |            |      |      |       |      |
+
+## CLI - terminer 명령어 학습
+
+```sh
+$ touch a.txt # a.txt 를 생성한다.
+$ mkdir test # test 폴더/디렉토리를 생성한다. Make DIRectory
+$ cd test # test 디렉토리로 이동한다. Change DIRectory
+$ cd .. # 상위 디렉토리로 이동한다.
+$ cd or cd ~ # home 디렉토리로 이동한다.
+$ cd - # 뒤로가기.
+$ cd / # root(최상단) 디렉토리로 이동한다.
+$ rm a.txt # a.txt를 삭제한다. ReMove
+$ rm -r test/ # test 디렉토리를 삭제한다.
+$ ls # LiSt 현재 디렉토리 안의 목록 (파일/디렉토리)을 표시한다.
+$ pwd # 현재 내가 위치한 디렉토리를 표시한다. Present Working Diretory.
+```
+
+### git 기초명령
+
+```sh
+$ git init # 관리자 추가 - #pwd에서 git으로 버전관리 시작! (.git/을 만든다.)
+$ git remote add origin <remote url> # 드라이브 등록
+## 여기 까지는 한번만 ##
+$ git add . # 내 위치(.) 를 전체 등록 (사진 찍을 준비)
+$ git commit -m 'MESSAGE'# 사진찰칵 + 메시지
+## 계속 반복! add & commit ##
+$ git push origin master # 드라이브 백업
+```
+

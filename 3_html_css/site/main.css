@@ -1,0 +1,19 @@
+.orange-article
+        {
+            color: white;
+            background-color: orange;
+            font-size:40px;
+        }
+
+
+.red {
+    color: red;
+}
+
+.blue {
+    color:blue;
+}
+
+.big {
+    font-size: 100px;
+}

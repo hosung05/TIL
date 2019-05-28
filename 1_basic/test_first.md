@@ -76,12 +76,15 @@ $ mkdir test # test 폴더/디렉토리를 생성한다. Make DIRectory
 $ cd test # test 디렉토리로 이동한다. Change DIRectory
 $ cd .. # 상위 디렉토리로 이동한다.
 $ cd or cd ~ # home 디렉토리로 이동한다.
+$ cp a b # a를 b로 복사한다.
 $ cd - # 뒤로가기.
 $ cd / # root(최상단) 디렉토리로 이동한다.
 $ rm a.txt # a.txt를 삭제한다. ReMove
 $ rm -r test/ # test 디렉토리를 삭제한다.
 $ ls # LiSt 현재 디렉토리 안의 목록 (파일/디렉토리)을 표시한다.
 $ pwd # 현재 내가 위치한 디렉토리를 표시한다. Present Working Diretory.
+$ ctrl + w #단어 기준으로 backspace
+$ ctrl
 ```
 
 ### git 기초명령

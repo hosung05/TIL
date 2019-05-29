@@ -1,7 +1,5 @@
 from flask import Flask, render_template  # pip install requests
-import requests  # pip install requests
-import random
-import json
+
 
 app = Flask(__name__)
 
@@ -45,19 +43,8 @@ def lotto(num):
     lucky_numbers = random.sample(range(1, 46), 6)
     lucky_numbers.sort()
 
-    url = f'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={num}'
-    res = requests.get(url).text  # type == String
-    data = json.loads(res)  # type == dict
-    bonus_number = data['bnusNo']
+    get_lotto_numbers(num)
 
-    real_numbers = []
-
-    if data['returnValue'] == 'success':
-        for key, value in data.items():
-            if 'drwtNo' in key:
-                real_numbers.append(value)
-
-        real_numbers.sort()
 
     # 등수 비교
     lucky = set(lucky_numbers)
@@ -90,6 +77,28 @@ def lotto(num):
 def square(num):
     result = num ** 2
     return f'{result}'
+
+def get_random_numbers():
+    numbers = random.sample(range(1, 46), 6)
+        return sorted(numbers)
+
+
+def git_lotoo_numbers(num):
+    url = f'https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={num}'
+    res = requests.get(url).text  # type == String
+    data = json.loads(res)  # type == dict
+    bonus_number = data['bnusNo']
+
+    real_numbers = []
+
+    if data['returnValue'] == 'success':
+        for key, value in data.items():
+            if 'drwtNo' in key:
+                real_numbers.append(value)
+
+        real_numbers.sort()
+    return {'real' : real_numbers, 'bonus' : bonus_number}
+
 
 
 if __name__ == '__main__':

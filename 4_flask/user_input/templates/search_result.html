@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<h1>Result Page</h1>
+<h2>{{message}}</h2>
+{% if is_success %}
+    <p>{{ c_name }} : $ {{ l_price }}</p>
+{% else %}
+    <p>해당 주식 정보를 검색할 수 없습니다.</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="/home/">Home</a></li>
+        <li><a href="/home/help_me/">Help</a></li>
+        <li><a href="/home/contact/">Contact</a></li>
+    </ul>
+</nav>
+{% block body %}
+{% endblock %}
+<footer>만든사람 = 호성성님</footer>
+</body>
+</html>

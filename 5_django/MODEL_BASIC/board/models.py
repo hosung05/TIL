@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-
+# Model Template View
 class Article(models.Model):
     # id = primary key
     title = models.CharField(max_length=200)

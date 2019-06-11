@@ -1,0 +1,14 @@
+{% extends 'board/base.html' %}
+
+{% block body %}
+
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.content }}</p>
+
+
+    <a href="/board/{{ article_id }}/delete"
+       onclick="return confirm('real?')">
+        <button>삭 제</button>
+    </a>
+
+{% endblock %}
